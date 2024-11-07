@@ -13,4 +13,4 @@ function Celsius_para_Fahrenheit(valor){
 
 //Saida
 
-alert("Temperatura em F: " + Celsius_para_Fahrenheit(C));
+document.write("Temperatura em F: " + Celsius_para_Fahrenheit(C));
