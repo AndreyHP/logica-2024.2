@@ -7,8 +7,10 @@ let C = prompt("Digite o valor em Celsius");
 
 // Processamento
 
-let F = (C * 9 / 5) + 32;
+function Celsius_para_Fahrenheit(valor){
+    return (valor * 9 / 5) + 32;
+}
 
 //Saida
 
-alert("Temperatura em F: " + F);
+alert("Temperatura em F: " + Celsius_para_Fahrenheit(C));
