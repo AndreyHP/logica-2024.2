@@ -19,7 +19,6 @@ function calcularMetroQuadrado(largura, comprimento){
 
 function calcularNumerodeLamp(watts, comodo){
     
-    
     let wattsTotal = 18 * comodo;
     return wattsTotal / watts;
 };
