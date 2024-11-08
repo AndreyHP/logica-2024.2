@@ -23,7 +23,6 @@ function calcularNumerodeLamp(watts, comodo){
     return wattsTotal / watts;
 };
 
-
 //mostrar o resultado.
 
 document.write("Lampadas " + calcularNumerodeLamp(watts,calcularMetroQuadrado(largura,comprimento)));
