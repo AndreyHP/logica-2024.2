@@ -46,7 +46,4 @@ function Pitstops(){
     novonode.appendChild(document.createTextNode("Litros gastos: " + minLitros + "L"));
     node.appendChild(novonode);
 
-    
-
-
 };
