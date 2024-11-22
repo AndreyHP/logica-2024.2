@@ -1,13 +1,41 @@
 //10) Escreva um programa para ler 3 valores inteiros (considere que não serão lidos valores iguais) e
 //escrevê-los em ordem crescente.
 
-var valor1 = 0;
-var valor2 = 0;
-var valor3 = 0;
+var valor1 = " ";
+var valor2 = " ";
+var valor3 = " ";
+var buffer = " ";
 
-var resultado = 0;
 var valIguais = false;
 
+
+function ordenarValores(valor1,valor2,valor3){
+
+	var resultado = " ";
+
+	if (valor1 > valor3){
+		buffer = valor1;
+		valor1 = valor3;
+		valor3 = buffer;
+		} 
+		
+		if(valor2 > valor3){
+		buffer = valor3;
+		valor3 = valor2;
+		valor2 = buffer;
+		}
+		
+		if(valor1 > valor2){
+		buffer = valor2;
+		valor2 = valor1;
+		valor1 = buffer;
+		};
+
+
+		resultado = valor1 + "," + valor2 + "," + valor3;
+
+		return resultado
+};
 
 function mostrarValor(){
 
@@ -23,25 +51,14 @@ function mostrarValor(){
 	}
 
 
-	console.log(valIguais);
+	//console.log(valIguais);
 
 	if (valIguais == false){
 
 		var node = document.getElementById("text");
 		var novonode = document.createElement("p");
 
-
-
-		if (valor1 > valor2 && valor3){
-		resultado = valor1;
-		}else if(valor2 > valor3){
-		resultado = valor2;
-		}else{
-		resultado = valor3;
-		};
-
-
-		novonode.appendChild(document.createTextNode(resultado));
+		novonode.appendChild(document.createTextNode(ordenarValores(valor1,valor2,valor3)));
 		node.appendChild(novonode);
 
 
