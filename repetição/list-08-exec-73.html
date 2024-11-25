@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="container"></div>
+    <input type="text", id="Numero", value="">Numero</input><br>
+    <p id="text"></p>
+    <button onclick="mostrar()">Entrar</button>
+    <script>
+
+
+    function mostrar(){
+    
+        var numero = parseFloat(document.getElementById("Numero").value);
+    
+    
+        var node = document.getElementById("text");
+        var novonode = document.createElement("p");
+        
+        if (numero != 0){
+            novonode.appendChild(document.createTextNode(numero));
+            node.appendChild(novonode);
+        }
+  
+        
+
+
+    }
+   
+    
+ 
+
+    </script>
+</body>
+</html>
