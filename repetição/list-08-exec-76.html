@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="container"></div>
+    <input type="text", id="NumeroInicio", value="">NumeroInicio</input><br>
+    <input type="text", id="NumeroFinal", value="">NumeroFinal</input><br>
+    <p id="text"></p>
+    <button onclick="inicio()">Inicior</button>
+    <button onclick="mostrar()">Mostrar</button>
+
+
+
+<script>
+//76) Construa um algoritmo que leia 50 valores inteiros e positivos e:
+//Encontre o maior valor
+//Encontre o menor valor
+//Calcule a média dos números lidos
+
+var pronto = 3;
+var numeroI = 0;
+
+function inicio(){
+    numeroI = parseFloat(document.getElementById("NumeroInicio").value);
+   document.getElementById("NumeroInicio").value = " ";
+    pronto -= 1;
+    var node = document.getElementById("text");
+    var novonode = document.createElement("p");
+    novonode.appendChild(document.createTextNode("Restante: " + pronto));
+    node.appendChild(novonode);
+};
+
+function media(I, F){
+
+    return I / F;
+};
+
+function mostrar(){
+    
+
+    
+    var numeroF = parseFloat(document.getElementById("NumeroFinal").value);
+
+    var node = document.getElementById("text");
+    var novonode = document.createElement("p");
+    
+    let resultado = 0;
+    let menor = numeroI;
+    let maior = numeroF;
+
+    
+    
+
+    if (pronto <=0){
+
+        novonode.appendChild(document.createTextNode("Menor: " + numeroI + " " + "Maior: " + numeroF + " " + "Media: " + media(numeroI,numeroF)));
+        node.appendChild(novonode);
+
+    };
+
+    
+}
+
+
+</script>
+</body>
+</html>
