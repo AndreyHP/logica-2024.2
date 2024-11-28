@@ -28,9 +28,9 @@ function appendArray(v){
     };
 };
 
-function appendNumber(){
+function appendNumber(n){
     for (var i = 0; i < valores.length; i++){
-        if (valores[i] == "25"){
+        if (valores[i] == n){
             resposta += `${i}, `;
         }
     };
@@ -53,7 +53,7 @@ function mostrar(){
     var novonode = document.createElement("p");
 
     if (pronto <=0){
-        novonode.appendChild(document.createTextNode(appendNumber()));
+        novonode.appendChild(document.createTextNode(appendNumber(25)));
         node.appendChild(novonode);
     };
 
