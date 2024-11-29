@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+    <div id="container"></div>
+    <input type="text", id="Titular", value="">Titular</input><br>
+    <input type="password", id="Senha", value="">Senha</input><br>
+    <p id="text"></p>
+    <button onclick="login()">Entrar</button>
+    
+    
+
+
+<script>
+//Criar uma conta de banco
+
+var Titular = "";
+var Senha = "";
+var Acess = false;
+var Saldo = 1000;
+var TipodeConta = "Corrente";
+
+function login(){
+    Titular = (document.getElementById("Titular").value);
+    document.getElementById("Titular").value = " ";//limpa a caixa
+    Senha = parseInt(document.getElementById("Senha").value);
+    
+    var node = document.getElementById("text");
+    var novonode = document.createElement("p");
+
+    if (Titular == "andrey" && Senha == "123"){
+        Acess = true;
+        mostrar();
+    }else{
+        var node = document.getElementById("text");
+        var novonode = document.createElement("p");
+        Acess = false;
+        novonode.appendChild(document.createTextNode("Login ou Senha Invalidos"));
+        node.appendChild(novonode);
+    }
+
+
+};
+
+function mostrar(){
+   
+   
+   if (Acess == true){
+    var node = document.getElementById("text");
+    const div = document.createElement('div');
+    div.innerHTML = `Titular: ${Titular} <br> Saldo: ${Saldo} $ <br> Conta: ${TipodeConta}`;
+    node.appendChild(div);
+   };
+   
+};
+
+</script>
+</body>
+</html>
